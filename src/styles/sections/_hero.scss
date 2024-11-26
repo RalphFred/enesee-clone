@@ -1,0 +1,100 @@
+@use "../config/config" as *;
+
+/* Header section */
+.header {
+  overflow-x: hidden;
+  position: relative;
+
+  .video__container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    overflow: hidden;
+
+    &--video{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%; 
+      min-height: 100%; 
+      width: auto; 
+      height: auto; 
+      z-index: -1; 
+    }
+  }
+
+  .navigation {
+    padding: 2.5rem 8rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media (max-width: 863px) {
+      padding: 2rem 1.5rem 0;
+    }
+
+    @media (max-width: 509px) {
+      padding: 2rem 1rem 0;
+    }
+
+    display: flex;
+    @include flex-content(flex, space-between, center);
+
+    &__link {
+      text-decoration: none;
+
+      &--image {
+        width: 16rem;
+      }
+    }
+
+    .list {
+      @include flex-content(flex, null, center);
+      gap: 3rem;
+
+      @media (max-width: 799px) {
+        display: none;
+      }
+
+      &__item {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: var(--white-000);
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 1216px;
+    @include flex-content(flex, null, center);
+    flex-direction: column;
+    gap: 4rem;
+
+    &__title{
+      color: var(--white-000);
+      font-size: 4.3rem;
+      text-align: center;
+      line-height: 5.25rem;
+    }
+
+    &__button {
+      padding: 1.25rem 4rem;
+      background-color: var(--white-000);
+      color: var(--dark-green);
+      border-radius: 4rem;
+      font-size: 24px;
+      font-weight: 500;
+      border: none;
+    }
+  }
+}

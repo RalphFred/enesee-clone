@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "neue-montreal";
+  src: url("/src/assets/fonts/neuemontreal/NeueMontreal-Regular.woff2") format("woff2"), url("/src/assets/fonts/neuemontreal/NeueMontreal-Regular.woff") format("woff");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+:root {
+  --white-000: #fff;
+  --dark-green: #03211b;
+  --light-green: #12f0c4;
+  --primary-font: "neue-montreal", sans-serif;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* mixins */
+/* Header section */
+.header {
+  overflow-x: hidden;
+  position: relative;
+}
+.header .video__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.header .video__container--video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+.header .navigation {
+  padding: 2.5rem 8rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 863px) {
+  .header .navigation {
+    padding: 2rem 1.5rem 0;
+  }
+}
+@media (max-width: 509px) {
+  .header .navigation {
+    padding: 2rem 1rem 0;
+  }
+}
+.header .navigation__link {
+  text-decoration: none;
+}
+.header .navigation__link--image {
+  width: 16rem;
+}
+.header .navigation .list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+@media (max-width: 799px) {
+  .header .navigation .list {
+    display: none;
+  }
+}
+.header .navigation .list__item {
+  list-style: none;
+}
+.header .navigation .list__item a {
+  text-decoration: none;
+  color: var(--white-000);
+  font-size: 18px;
+}
+.header .hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 1216px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.header .hero__title {
+  color: var(--white-000);
+  font-size: 4.3rem;
+  text-align: center;
+  line-height: 5.25rem;
+}
+.header .hero__button {
+  padding: 1.25rem 4rem;
+  background-color: var(--white-000);
+  color: var(--dark-green);
+  border-radius: 4rem;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+}
+
+/*# sourceMappingURL=main.css.map */

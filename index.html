@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./dist/css/main.css">
+  </head>
+  <body>
+    <header class="header">
+
+      <!-- VIDEO -->
+      <div class="video__container">
+        <video autoplay muted playsinline class="video__container--video">
+          <source src="/src/assets/images/illustration.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="navigation">
+        <a href="#" class="navigation__link">
+          <img src="/src/assets/images/enesee-white.svg" alt="enesee logo" class="navigation__link--image">
+        </a>
+
+        <ul class="list" id="navigation-link">
+          <li class="list__item">
+            <a href="#services" aria-label="services" onclick="lennis.scrollTo('#services')">Services</a>
+          </li>
+          <li class="list__item">
+            <a href="#why-enesee" aria-label="services" onclick="lennis.scrollTo('#why-enesee')">Why Enesee</a>
+          </li>
+          <li class="list__item">
+            <a href="#clients" aria-label="services" onclick="lennis.scrollTo('#clients')">Our Clients</a>
+          </li>
+          <li class="list__item">
+            <a href="#project" aria-label="services" onclick="lennis.scrollTo('#project')">Start a Project</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero__title">
+          Unleash Your Web3 Startup's Potential with Tailored Community and Design Solutions
+        </div>
+        <button class="hero__button">Contact us</button>
+      </div>
+    </header>   
+
+
+
+    <!-- Lennis Scroll CDN -->
+    <script src="https://unpkg.com/lenis@1.1.17/dist/lenis.min.js"></script> 
+
+     <!-- Script file for JS -->
+     <script src="./script.js"></script>
+  </body>
+</html>
