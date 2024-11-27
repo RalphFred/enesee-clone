@@ -8,26 +8,26 @@
   .video__container {
     position: relative;
     width: 100vw;
-    height: 100vh; 
+    height: 100vh;
     overflow: hidden;
 
-    &--video{
+    &--video {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      min-width: 100%; 
-      min-height: 100%; 
-      width: auto; 
-      height: auto; 
-      z-index: -1; 
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
     }
   }
 
   .navigation {
     padding: 2.5rem 8rem 0;
     position: absolute;
-    top: 0;
+    top: -80px;
     left: 0;
     width: 100%;
 
@@ -70,7 +70,7 @@
     }
   }
 
-  .hero{
+  .hero {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,11 +80,24 @@
     flex-direction: column;
     gap: 4rem;
 
-    &__title{
-      color: var(--white-000);
-      font-size: 4.3rem;
+    &__title {
+      @include flex-content(flex, null, null);
+      flex-direction: column;
       text-align: center;
-      line-height: 5.25rem;
+
+      .text__wrapper {
+        overflow: hidden;
+        line-height: 1.1;
+        margin: 0.1rem 0;
+
+        span {
+          color: var(--white-000);
+          font-size: 4.3rem;
+          white-space: nowrap;
+          display: inline-block;
+          will-change: transform;
+        }
+      }
     }
 
     &__button {

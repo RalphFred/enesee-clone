@@ -8,12 +8,36 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// REGISTER SCROLLTRIGGER
 
-// REGISTER SCROLLTRIGGER & CUSTOM EASE PLUGIN
-gsap.registerPlugin(SplitText);
+console.log(gsap);
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
+console.log(ScrollTrigger);
 
 // HEADER SECTION
 
 // Navigation
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector("#navigation");
+
+gsap.to("#navigation", {
+  top: 0,
+  duration: 1,
+  delay: 2,
+});
+
+//Hero title
+
+// const heroAnimation = gsap.timeline({
+//   ScrollTrigger: {
+//     trigger: '#w'
+//   }
+// })
+gsap.from("#hero-text", {
+  y: 200,
+  skewY: 15,
+  duration: 0.8,
+  stagger: 0.1,
+  delay: 2,
+});

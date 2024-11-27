@@ -63,7 +63,7 @@ html.lenis, html.lenis body {
 .header .navigation {
   padding: 2.5rem 8rem 0;
   position: absolute;
-  top: 0;
+  top: -80px;
   left: 0;
   width: 100%;
   display: flex;
@@ -117,10 +117,17 @@ html.lenis, html.lenis body {
   gap: 4rem;
 }
 .header .hero__title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header .hero__title span {
+  line-height: 5.25rem;
   color: var(--white-000);
   font-size: 4.3rem;
-  text-align: center;
-  line-height: 5.25rem;
+  white-space: nowrap;
+  display: inline-block;
+  will-change: transform;
 }
 .header .hero__button {
   padding: 1.25rem 4rem;
