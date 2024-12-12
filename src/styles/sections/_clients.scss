@@ -1,0 +1,92 @@
+@use "../config/config" as *;
+
+.clients {
+  overflow: hidden;
+  padding: 2rem 6rem;
+  
+
+  @media (max-width: 1024px) {
+    padding: 2rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 450px) {
+    padding: 2rem 1rem;
+  }
+
+  
+
+  &__client{
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+    &--heading{
+      font-size: 5rem;
+      color: var(--white-000);
+      margin-bottom: 2rem;
+
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--logos{
+      background-color: rgba(3, 48, 39, 0.27);
+      padding: 3rem 2rem; 
+      border-radius: 2rem;
+      overflow: hidden;
+
+      div{
+        display: flex;
+        gap: 3rem;
+        opacity: 100;
+      }
+
+      @media (max-width: 768px) {
+        padding: 2rem;
+      }
+    }
+  }
+
+  &__partners{
+
+    &--heading{
+      font-size: 5rem;
+      color: var(--white-000);
+      margin-bottom: 2rem;
+      text-align: right;
+
+      @media (max-width: 1024px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--logos{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      background-color: var(--dark-green);
+      border: 2px solid var(--light-green);
+      padding: 3rem 2rem; 
+      border-radius: 2rem;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        padding: 2rem;
+      }
+    }
+  }
+
+}

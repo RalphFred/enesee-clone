@@ -1,0 +1,70 @@
+@use "../config/config" as *;
+
+.project {
+  overflow: hidden;
+  padding: 1rem 6rem;
+
+  @media (max-width: 1024px) {
+    padding: 1rem 4rem;
+  }
+
+  @media (max-width: 540px) {
+    padding: 1rem;
+  }
+  
+
+  &__content{
+    background-image: url(/src/assets/images/contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 545px;
+    border-radius: 2rem 2rem 2rem 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      min-height: 450px;
+    }
+
+    @media (max-width: 540px) {
+      border-radius: 1rem;
+      text-align: center;
+      min-height: 300px;
+    }
+   
+
+    .heading{
+      color: var(--white-000);
+      margin-bottom: 3rem;
+     
+      p{
+        font-size: 5rem;
+        line-height: 1.5;
+
+        @media (max-width: 1024px) {
+          font-size: 3rem;
+          line-height: 1.25;
+        }
+
+        @media (max-width: 540px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .text{
+      font-size: 4.5rem;
+      color: var(--lighter-green);
+
+      @media (max-width: 1024px) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: 540px) {
+        font-size: 2.25rem;
+      }
+    }
+  }
+}

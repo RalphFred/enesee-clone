@@ -1,0 +1,136 @@
+@use "../config/config" as *;
+
+.why {
+  overflow: hidden;
+  padding: 1rem 6rem;
+  background: var(--dark-green);
+
+  @media (max-width: 1024px) {
+    padding: 1rem 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 450px) {
+    padding: 1rem;
+  }
+
+  &__content {
+    background-color: var(--accent-green);
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    &--heading {
+      display: flex;
+      width: fit-content;
+      text-wrap: nowrap;
+      flex: auto;
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 4rem;
+
+      p {
+        flex-shrink: 0;
+      }
+
+      .green {
+        font-size: 4.3rem;
+        color: var(--lighter-green);
+      }
+
+      .white {
+        font-size: 4.3rem;
+        color: var(--white-000);
+      }
+    }
+
+    &--cards {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .card {
+        padding: 4rem 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 350px;
+        width: 100%;
+        border-radius: 2rem;
+        position: relative;
+
+        @media (max-width: 1024px) {
+          padding: 2rem 1rem;
+        }
+
+        &:nth-child(1) {
+          background-image: url(/src/assets/images/whyIlly1.png);
+
+          &:after {
+            content: "01";
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0.5rem;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 8rem;
+            line-height: 9rem;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(18, 240, 196, 0.5);
+          }
+        }
+
+        &:nth-child(2) {
+          background-image: url(/src/assets/images/whyIlly2.png);
+
+          &:after {
+            content: "02";
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0.5rem;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 8rem;
+            line-height: 9rem;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(18, 240, 196, 0.5);
+          }
+        }
+
+        &:nth-child(3) {
+          background-image: url(/src/assets/images/whyIlly3.png);
+
+          &:after {
+            content: "03";
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0.5rem;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 8rem;
+            line-height: 9rem;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(18, 240, 196, 0.5);
+          }
+        }
+
+        p {
+          color: var(--lighter-green);
+          font-size: 1.1rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use "../config/config" as *;
+
+.services {
+  overflow: hidden;
+
+  &__heading {
+    display: flex;
+    width: fit-content;
+    text-wrap: nowrap;
+    flex: auto;
+    flex-direction: row;
+    gap: 2rem;
+    background: var(--white-000);
+    padding: 1rem 0 0.5rem;
+
+    p {
+      flex-shrink: 0;
+    }
+
+    &--green {
+      font-size: 4.3rem;
+      color: var(--light-green);
+
+      @media (max-width: 540px) {
+        font-size: 3rem;
+      }
+    }
+
+    &--black {
+      font-size: 4.3rem;
+
+      @media (max-width: 540px) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__service {
+    background-color: var(--dark-green);
+    padding: 2rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @media (max-width: 1280px) {
+      padding: 2rem 4rem;
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 445px) {
+      padding: 1rem;
+    }
+
+    &--card {
+      min-height: 500px;
+      border: 1px solid var(--light-green);
+      border-radius: 2rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-end;
+      padding: 4rem;
+      color: var(--white-000);
+
+      @media (max-width: 1024px) {
+        padding: 2rem;
+      }
+
+      &:nth-child(1) {
+        width: 100%;
+        background-image: url(/src/assets/images/service-illy1.png);
+        grid-column: span 2;
+      }
+
+      &:nth-child(2) {
+        width: 100%;
+        background-image: url(/src/assets/images/service-illy2.png);
+        grid-column: span 1;
+
+        @media (max-width: 850px) {
+          grid-column: span 2;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 100%;
+        background-image: url(/src/assets/images/service-illy3.png);
+        grid-column: span 1;
+
+        @media (max-width: 850px) {
+          grid-column: span 2;
+        }
+      }
+
+      .bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__heading{
+          font-size: 2rem;
+        }
+
+        &__content{
+
+          span{
+            display: inline-block;
+            margin: 0 .25rem;
+          }
+        }
+      }
+    }
+  }
+}

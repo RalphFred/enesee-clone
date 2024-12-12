@@ -31,11 +31,15 @@
     left: 0;
     width: 100%;
 
-    @media (max-width: 863px) {
-      padding: 2rem 1.5rem 0;
+    @media (max-width: 1280px) {
+      padding: 2rem 2rem 0;
     }
 
-    @media (max-width: 509px) {
+    @media (max-width: 768px) {
+      padding: 2rem 2rem 0;
+    }
+
+    @media (max-width: 440px) {
       padding: 2rem 1rem 0;
     }
 
@@ -47,6 +51,18 @@
 
       &--image {
         width: 16rem;
+
+        @media (max-width: 1024px) {
+          width: 220px;
+        }
+
+        @media (max-width: 768px) {
+          width: 180px;
+        }
+
+        @media (max-width: 540px) {
+          width: 150px;
+        }
       }
     }
 
@@ -75,27 +91,53 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 1216px;
+    width: 100%;
+    max-width: 1216px;
     @include flex-content(flex, null, center);
     flex-direction: column;
     gap: 4rem;
+    overflow: hidden;
 
     &__title {
       @include flex-content(flex, null, null);
       flex-direction: column;
       text-align: center;
 
-      .text__wrapper {
-        overflow: hidden;
-        line-height: 1.1;
-        margin: 0.1rem 0;
+      .hero-text {
+        color: var(--white-000);   
+        
+        @media (max-width: 1280px) {
+          max-width: 1160px;
+        }
 
-        span {
-          color: var(--white-000);
-          font-size: 4.3rem;
-          white-space: nowrap;
-          display: inline-block;
-          will-change: transform;
+        @media (max-width: 1024px) {
+          max-width: 896px;
+        }
+
+        @media (max-width: 440px) {
+          max-width: 392px;
+        }
+
+        @media (max-width: 375px) {
+          max-width: 343px;
+        }
+      }
+
+      .char {
+        font-size: 4.3rem;
+        line-height: 1.1;
+
+        @media (max-width: 1024px) {
+          font-size: 3.5rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 3rem;
+        }
+
+        @media (max-width: 540px) {
+          font-size: 2rem;
+          line-height: 1.5;
         }
       }
     }
@@ -105,9 +147,14 @@
       background-color: var(--white-000);
       color: var(--dark-green);
       border-radius: 4rem;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 500;
       border: none;
+
+      @media (max-width: 540px) {
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+      }
     }
   }
 }

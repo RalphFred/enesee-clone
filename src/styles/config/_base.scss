@@ -15,7 +15,9 @@
 :root {
   --white-000: #fff;
   --dark-green: #03211b;
-  --light-green: #12f0c4;
+  --accent-green: #033027;
+  --light-green: #09846b;
+  --lighter-green: #12f0c4;
 
   --primary-font: "neue-montreal", sans-serif;
 }
@@ -38,4 +40,10 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+.bg{
+  background-image: url(/src/assets/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
